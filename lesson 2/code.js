@@ -89,7 +89,7 @@ alert(mathOperation(arg1, arg2, operation)); // Выводим значение 
     if (pow != 0) {          // условие что степень неравна 0
       return val * power(val, pow - 1 ); // действие 
     } else {
-      return 1; // Если степень равна 0, нам возращается число без изменений
+      return 1; // Если степень равна 0, нам возращается  1
     }
   }
     alert(power(val, pow));
