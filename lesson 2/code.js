@@ -86,10 +86,10 @@ alert(mathOperation(arg1, arg2, operation)); // Выводим значение 
   let val = Number(prompt('Введите число: ')); 
   let pow = Number(prompt('Введите степень: ')); 
   function power(val, pow){   //функция возведения в степень
-    if (pow != 0) {          // условие что степень неравна 1
+    if (pow != 0) {          // условие что степень неравна 0
       return val * power(val, pow - 1 ); // действие 
     } else {
-      return 1; // Если степень равна 1, нам возращается число без изменений
+      return 1; // Если степень равна 0, нам возращается число без изменений
     }
   }
     alert(power(val, pow));
