@@ -31,9 +31,10 @@ let b = parseInt(prompt('Введите число b:'));
   else if (a < 0 && b < 0) {
     alert( 'Произведение этих чисел: ' + a * b);
   }
-  else if (a >= 0 && b < 0 || a < 0 && b >= 0) {
+  else if (a * b < 0) { // Проверка что число разных знаков
     alert( 'Сумма этих чисел: ' + (a + b));
   } 
+
 // 4 задание
 
 function operationSum(x , y){
@@ -52,6 +53,9 @@ function operationMult(x , y){
 alert(operationMult(10 , 2));
 
 function operationDivid(x , y){
+  if(y === 0) {                 // Ввел проверку т.к. на ноль делить нельзя
+    return -1
+  }
   return x / y;
 } 
 alert(operationDivid(10 , 2));
@@ -63,13 +67,13 @@ let arg2 = Number(prompt('Введите второе число:  '));
 function mathOperation(arg1, arg2, operation) {
   switch (operation) {
     case '+':
-      return arg1 + arg2;
+      return operationSum(arg1, arg2);
     case '-':
-      return arg1 - arg2; 
+      return operationSub(arg1, arg2); 
     case '*':
-      return arg1 * arg2;
+      return operationMult(arg1, arg2);
     case '/':
-    return arg1 / arg2;
+    return operationDivid(arg1, arg2);
       default:
       alert('Упс..');  
   }
@@ -77,15 +81,15 @@ function mathOperation(arg1, arg2, operation) {
 alert(mathOperation(arg1, arg2, operation)); // Выводим значение вычесленной функции
 
 // 6 задание 
-// функция power рекурсивно вызывает сама себя до pow == 1
+// функция power рекурсивно вызывает сама себя до pow == 0
 // на этом значение рекурсия останавливается
   let val = Number(prompt('Введите число: ')); 
   let pow = Number(prompt('Введите степень: ')); 
   function power(val, pow){   //функция возведения в степень
-    if (pow != 1) {          // условие что степень неравна 1
+    if (pow != 0) {          // условие что степень неравна 1
       return val * power(val, pow - 1 ); // действие 
     } else {
-      return val; // Если степень равна 1, нам возращается число без изменений
+      return 1; // Если степень равна 1, нам возращается число без изменений
     }
   }
     alert(power(val, pow));
