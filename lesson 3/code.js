@@ -1,6 +1,6 @@
 'use strict'
 // 1 задание
-// 3 варианта копирования массива
+// После разбора на уроке переделал
 let a = [
   [{name: 'Mary', age: 23}, {name: 'Mike', age: 45}, {name: 'Nick', age: 11}],
   [{name: 'Adam', age: 56}, {name: 'Sara', age: 21}, {name: 'Don', age: 22}],
@@ -11,13 +11,28 @@ console.log(b);
 b.name = 2;
 console.log(b);
  console.log(a);  */
- let b = [...a]; // использовал оператор spread для копирования массива
- console.log(b);
-console.log(a);
-/* let b;
+// let b = [...a]; // использовал оператор spread для копирования массива
+ /* let b;
 b = Object.assign([], a); // как в уроке использовал Object.assign 
 console.log(b); */
+let b = [];
+/*for(let i = 0; i < a.length; i++) {
+  b[i] = [];
+  for(let j = 0; j < a[i].length; j++) {
+    b[i][j] = Object.assign({}, a[i][j]);
+  }
+} */
+a.forEach(function(item, index){
+  b[index] = [];
+  item.forEach(function(i, ind){
+    b[index][ind] = Object.assign({}, i);
+  })
+});
 
+
+a[0] [0].name = 0;
+console.log(a);
+console.log(b);
 
 // 2 задание 
  
