@@ -5,6 +5,7 @@ html {
 table {
     border-collapse: collapse;
     background: white;
+    float: left;
 }
 
 tr:nth-child(odd) td:nth-child(even),  
@@ -24,3 +25,14 @@ td {
     border: 2px solid black;
 }
 
+
+.totalbasket {
+  float: left;
+  margin: 100px;
+  padding-top: 50px;
+  width: 360px;
+  height: 200px;
+  text-align: center;
+  font-size: 34px;
+  background-color: ivory;
+}
