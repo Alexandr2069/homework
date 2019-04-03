@@ -1,0 +1,38 @@
+html {
+    background: #cfcfcf;
+}
+
+table {
+    border-collapse: collapse;
+    background: white;
+    float: left;
+}
+
+tr:nth-child(odd) td:nth-child(even),  
+tr:nth-child(even) td:nth-child(odd) {
+    background: #000; 
+}
+
+th {
+    width: 40px;
+    height: 40px;
+    border: 2px solid black;
+}
+
+td {
+    width: 40px;
+    height: 40px;
+    border: 2px solid black;
+}
+
+
+.totalbasket {
+  float: left;
+  margin: 100px;
+  padding-top: 50px;
+  width: 360px;
+  height: 200px;
+  text-align: center;
+  font-size: 34px;
+  background-color: ivory;
+}
