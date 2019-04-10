@@ -1,0 +1,37 @@
+html {
+    background: gainsboro;
+}
+
+#basket-display {
+  padding: 30px;
+  text-align: left;
+  font-size: 32px;
+  background-color: greenyellow;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+#basket-display span {
+  padding: 5px;
+  border: solid 1px green;
+  border-radius:  5px ;
+  -webkit-border-radius:  5px ;
+  -moz-border-radius:  5px ;
+  -ms-border-radius:  5px ;
+  -o-border-radius:  5px ;
+}
+
+.products {
+  border-radius:20px;
+  display: inline-block;
+  padding: 20px;
+  margin: 10px;
+  background-color: ivory;
+  -webkit-border-radius:20px;
+  -moz-border-radius:20px;
+  -ms-border-radius:20px;
+  -o-border-radius:20px;
+}
